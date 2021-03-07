@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            box-shadow: none;
+            cursor: pointer;
+
+            display: flex;
+            margin: 5px 10px;
+            padding: 10px 15px;
+            border-radius: 1px;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: white;
+            background: #315efb;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+            transform: scale(1.05);
+        }
+        .chat-container {
+            width: 465px;
+        }
+        .input-container {
+            border: 1px solid #759EE5;
+            display: flex;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        input {
+            outline: none;
+            border: 1px solid #759EE5;
+        }
+        input {
+            height: 30px;
+        }
+        .output-container {
+            border: 1px solid #759EE5;
+            padding: 10px 10px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .client {
+            margin-bottom: 55px;
+        }
+        .server {
+            margin-top: 55px;
+        }
+        .message {
+            border: 2px solid #759EE5;
+            border-radius: 7px;
+            padding: 5px;
+            max-width: 200px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Enter message...">
+            <button class="btn btn-send">Отправить</button>
+            <button class="btn btn-geo">Гео-локация</button>
+        </div>
+        <div class="output-container">
+            <div id="client-side"></div>
+            <div id="server-side"></div>
+        </div>
+    </div>
+    <script src="scripts/task_3.js"></script>
+</body>
+</html>
